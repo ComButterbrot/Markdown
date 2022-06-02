@@ -13,7 +13,7 @@
 
 **Примечание.** В настоящее время они умеют работать только с одним видом коллекций — [списком записей](https://wasaby.dev/doc/platform/models-collections-types/icollection/#wsdatacollectionrecordset).
 
-**[Диаграмма компонентов для контрола коллекции]**
+**[Диаграмма компонентов для контрола коллекции](https://drive.google.com/file/d/1o713Qkry7C1Txlny33eQWCySMVTv6G0M/view?usp=sharing)**
 
 На данной диаграмме представлены:
 

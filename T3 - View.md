@@ -1,13 +1,13 @@
 # **Контрол "Таблица" (class Controls/grid:View)** #
 
 **В этой статье:**
-- Иерархия контрола "Таблица"
-- Пример таблицы
-- Опции
-- Поля
-- Методы
-- События
-- Полезные ссылки
+- [Иерархия контрола "Таблица"](https://github.com/ComButterbrot/Markdown/blob/main/T3%20-%20View.md#:~:text=%D0%98%D0%B5%D1%80%D0%B0%D1%80%D1%85%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D0%B0%20%22%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0%22%3A)
+- [Пример таблицы](https://github.com/ComButterbrot/Markdown/blob/main/T3%20-%20View.md#:~:text=%D0%B2%20%D0%B2%D0%B8%D0%B4%D0%B5%20%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D1%8B.-,%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D1%8B)
+- [Опции](https://github.com/ComButterbrot/Markdown/blob/main/T3%20-%20View.md#:~:text=%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%BE-,%D0%9E%D0%BF%D1%86%D0%B8%D0%B8,-%D0%9E%D0%BF%D1%86%D0%B8%D0%B8%20%2D%20%D1%8D%D1%82%D0%BE%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B)
+- [Поля](https://github.com/ComButterbrot/Markdown/blob/main/T3%20-%20View.md#:~:text=%D0%BF%D0%BE%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B5.-,%D0%9F%D0%BE%D0%BB%D1%8F,-%D0%9F%D0%BE%D0%BB%D0%B5%20%D1%8F%D0%B2%D0%BB%D1%8F%D0%B5%D1%82%D1%81%D1%8F%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9)
+- [Методы](https://github.com/ComButterbrot/Markdown/blob/main/T3%20-%20View.md#:~:text=%D0%BF%D0%BE%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B5.-,%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D1%8B,-%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%20%2D%20%D1%8D%D1%82%D0%BE%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F)
+- [События](https://github.com/ComButterbrot/Markdown/blob/main/T3%20-%20View.md#:~:text=%D0%BF%D0%BE%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B5.-,%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F,-%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B5%20%2D%20%D1%8D%D1%82%D0%BE%20%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D0%B5)
+- [Полезные ссылки](https://github.com/ComButterbrot/Markdown/blob/main/T3%20-%20View.md#:~:text=%D0%BF%D0%BE%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B5.-,%D0%9F%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5%20%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8%3A,-%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0)
 
 **Иерархия контрола "Таблица":**
 - модуль **[Controls](https://wasaby.dev/docs/js/Controls?v=22.4100)** - готовый набор визуальных компонентов, отвечающих корпоративным стандартам и позволяющих быстро спроектировать визуальную составляющую веб-приложения;
@@ -24,13 +24,15 @@
 |  4   | Григорьев | Дмитрий | Кострома|
 |  5   |  Викторов | Виктор  | Иваново |
 
+Другие примеры доступны по [ссылке](https://wasaby.dev/docs/js/Controls/grid/View#examples).
+
 **Опции**
 
 Опции - это объекты, в которых хранятся параметры, переданные при инициализации контрола. Опции доступны только на чтение, и менять их можно только через родительский контрол. Изменение объекта опций подобно изменению аргументов, переданных в функцию. Подробнее про опции можно прочитать в соответствующей [статье](https://wasaby.dev/doc/platform/ui-library/options/).
 
 Примеры использования опций:
 
-- [draggingTemplate](https://wasaby.dev/docs/js/Controls/grid/View/options/draggingTemplate/?v=22.3100#option) (шаблон перемещения элементов, интерфейс IDraggable), использование базового шаблона перемещения элементов:
+- [draggingTemplate](https://wasaby.dev/docs/js/Controls/grid/View/options/draggingTemplate/?v=22.3100#option) (шаблон перемещения элементов, интерфейс [IDraggable](https://wasaby.dev/docs/js/Controls/interface/IDraggable?v=22.3100)), использование базового шаблона перемещения элементов:
     
         <!-- WML -->
         <Controls.list:View
@@ -38,7 +40,7 @@
             keyProperty="id"
             on:dragStart="_onDragStart()"
             itemsDragNDrop="{{true}}">
-            <ws:draggingTemplate>
+            <ws:draggingTemplate> //использование опции draggingTemplate
                 <ws:partial template="Controls/dragnDrop:DraggingTemplate"
                     mainText="{{draggingTemplate.entity.getOptions().mainText}}"
                     image="{{draggingTemplate.entity.getOptions().image}}"
@@ -62,7 +64,7 @@
         this._viewSource= new Source({...});
         }
 
-- [excludedKeys](https://wasaby.dev/docs/js/Controls/grid/View/options/excludedKeys/?v=22.3100#option) (набор ключей исключенных элементов, интерфейс IPromisedSelectable), создание списка и выбор всех элементов, кроме двух:
+- [excludedKeys](https://wasaby.dev/docs/js/Controls/grid/View/options/excludedKeys/?v=22.3100#option) (набор ключей исключенных элементов, интерфейс [IPromisedSelectable](https://wasaby.dev/docs/js/Controls/interface/IPromisedSelectable?v=22.3100)), создание списка и выбор всех элементов, кроме двух:
     
         <!-- WML -->
         <Controls.operations:Controller
@@ -74,10 +76,10 @@
         _excludedKeys: null,
         _beforeMount: function() {
             this._selectedKeys = [null];
-            this._excludedKeys = [1, 2];
+            this._excludedKeys = [1, 2]; //параметры выборки (указание порядковых номеров исключаемых элементов)
         }
 
-- [filter](https://wasaby.dev/docs/js/Controls/grid/View/options/filter/?v=22.3100#option) (конфигурация объекта фильтра, интерфейс IFilter), отображение в списке двух элементов на основании конфигурации объекта фильтра:
+- [filter](https://wasaby.dev/docs/js/Controls/grid/View/options/filter/?v=22.3100#option) (конфигурация объекта фильтра, интерфейс [IFilter](https://wasaby.dev/docs/js/Controls/interface/IFilter?v=22.3100)), отображение в списке двух элементов на основании конфигурации объекта фильтра:
     
         <!-- WML -->
         <Controls.list:View
@@ -86,7 +88,7 @@
             source="{{_source}}" />
     
         // JavaScript
-        this._filter = {id: ['1', '2']};
+        this._filter = {id: ['1', '2']}; //параметры выборки (указание id требуемых элементов)
         this._source = new Memory({
             keyProperty: 'id',
             data: [
@@ -117,14 +119,14 @@
 
 Значение поля устанавливается опцией [value](https://wasaby.dev/docs/js/Controls/input/Text/options/value/?v=22.4100):
     
+    <!-- WML -->
+    <Controls.input:Text bind:value="myText" /> //определение значения поля опцией value
+    
     // TypeScript
     export default class extends Control {
         protected _template: TemplateFunction = Template;
         protected myText: "Hello, world!";
     }
-    
-    <!-- WML -->
-    <Controls.input:Text bind:value="myText" />
 
 Список полей контрола "Таблица" в формате "Поле - Назначение - Класс" доступен по [ссылке](https://wasaby.dev/docs/js/Controls/grid/View#field).
 
@@ -161,7 +163,75 @@
 **События**
 
 Событие - это сообщение, которое возникает в различных точках исполняемого кода при выполнении определённых условий. События предназначены для определения реакции программного обеспечения.
+    
+Примеры событий:
 
+- [dragStart](https://wasaby.dev/docs/js/Controls/grid/View/events/dragEnter/?v=22.4100#method) (происходит при начале перемещения элемента, интерфейс [IDraggable](https://wasaby.dev/docs/js/Controls/interface/IDraggable?v=22.3100)), перемещение в список объектов определённого типа:
+    
+    <!-- WML -->
+    <Controls.list:DataContainer source="{{_firstSource}}" keyProperty="id">
+        <Controls.list:View
+            on:dragStart="_dragStart()"
+            itemsDragNDrop="{{true}}" />
+    </Controls.list:DataContainer>
+    <Controls.list:DataContainer source="{{_secondSource}}" keyProperty="id">
+        <Controls.list:View
+            on:dragEnter="_dragEnter()"
+            itemsDragNDrop="{{true}}" />
+    </Controls.list:DataContainer>
+    
+    // JavaScript
+    _dragStart: function(event, items) {
+        return new TasksItemsEntity({
+            items: items
+        });
+    },
+    _dragEnter: function(event, entity) {
+        var result = false;
+        if (entity instanceof TasksItemsEntity) {
+            result = new Record({...});
+        }
+        return result;
+    },
+    _beforeMount: function() {
+        this._firstSource = new Source({...});
+        this._secondSource = new Source({...});
+    }
+    
+- [filterChanged](https://wasaby.dev/docs/js/Controls/grid/View/events/filterChanged/?v=22.4100#method) (происходит при изменении фильтра, интерфейс [IFilterChanged](https://wasaby.dev/docs/js/Controls/interface/IFilterChanged/?v=22.4100)), изменение фильтра:
+    
+    <!-- WML -->
+    <Controls.filter:Controller on:filterChanged="filterChanged()" filter="{{ _filter }}"/>
+    {{ _filterString }}
+
+    // JavaScript
+    _filter: null,
+    _beforeMount: function() {
+        this._filter = {
+            city: 'Yaroslavl'
+        }
+    },
+    filterChanged: function(e, filter) {
+        this._filter = filter; //самостоятельное обновление фильтра по причине отсутствия связи между опцией filter и состоянием
+        this._filterString = JSON.stringify(this._filter, null, 4);
+    }
+    
+- [selectedKeysChanged](https://wasaby.dev/docs/js/Controls/grid/View/events/selectedKeysChanged/?v=22.4100#method) (происходит при изменении набора выбранных элементов списка, интерфейс [IPromisedSelectable](https://wasaby.dev/docs/js/Controls/interface/IPromisedSelectable/?v=22.4100)), привязка обновлений при изменении selectedKeys:
+    
+    <!-- WML -->
+    <Controls.operations:Controller on:selectedKeysChanged="onSelectedKeysChanged()" bind:selectedKeys="_selectedKeys" bind:excludedKeys="_excludedKeys">
+    <Controls.operations:Panel source="{{ _panelSource }} />
+    </Controls.operations:Controller>
+                                       
+    // JavaScript
+    _beforeMount: function() {
+        this._selectedKeys = [];
+        this._excludedKeys = [];
+    },
+    onSelectedKeysChanged: function(e, selectedKeys, added, deleted) {
+        this._panelSource = this._getPanelSource(selectedKeys); //состояние не требует обновления вручную по причине привязки
+    }                                   
+    
 Список событий контрола "Таблица" в формате "Событие - Назначение - Интерфейс" доступен по [ссылке](https://wasaby.dev/docs/js/Controls/grid/View#event).
 
 **Полезные ссылки:**

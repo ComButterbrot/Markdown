@@ -168,69 +168,69 @@
 
 - [dragStart](https://wasaby.dev/docs/js/Controls/grid/View/events/dragEnter/?v=22.4100#method) (происходит при начале перемещения элемента, интерфейс [IDraggable](https://wasaby.dev/docs/js/Controls/interface/IDraggable?v=22.3100)), перемещение в список объектов определённого типа:
     
-    <!-- WML -->
-    <Controls.list:DataContainer source="{{_firstSource}}" keyProperty="id">
-        <Controls.list:View
-            on:dragStart="_dragStart()"
-            itemsDragNDrop="{{true}}" />
-    </Controls.list:DataContainer>
-    <Controls.list:DataContainer source="{{_secondSource}}" keyProperty="id">
-        <Controls.list:View
-            on:dragEnter="_dragEnter()"
-            itemsDragNDrop="{{true}}" />
-    </Controls.list:DataContainer>
+        <!-- WML -->
+        <Controls.list:DataContainer source="{{_firstSource}}" keyProperty="id">
+            <Controls.list:View
+                on:dragStart="_dragStart()"
+                itemsDragNDrop="{{true}}" />
+        </Controls.list:DataContainer>
+        <Controls.list:DataContainer source="{{_secondSource}}" keyProperty="id">
+            <Controls.list:View
+                on:dragEnter="_dragEnter()"
+                itemsDragNDrop="{{true}}" />
+        </Controls.list:DataContainer>
     
-    // JavaScript
-    _dragStart: function(event, items) {
-        return new TasksItemsEntity({
-            items: items
-        });
-    },
-    _dragEnter: function(event, entity) {
-        var result = false;
-        if (entity instanceof TasksItemsEntity) {
-            result = new Record({...});
+        // JavaScript
+        _dragStart: function(event, items) {
+            return new TasksItemsEntity({
+                items: items
+            });
+        },
+        _dragEnter: function(event, entity) {
+            var result = false;
+            if (entity instanceof TasksItemsEntity) {
+                result = new Record({...});
+            }
+            return result;
+        },
+        _beforeMount: function() {
+            this._firstSource = new Source({...});
+            this._secondSource = new Source({...});
         }
-        return result;
-    },
-    _beforeMount: function() {
-        this._firstSource = new Source({...});
-        this._secondSource = new Source({...});
-    }
     
 - [filterChanged](https://wasaby.dev/docs/js/Controls/grid/View/events/filterChanged/?v=22.4100#method) (происходит при изменении фильтра, интерфейс [IFilterChanged](https://wasaby.dev/docs/js/Controls/interface/IFilterChanged/?v=22.4100)), изменение фильтра:
     
-    <!-- WML -->
-    <Controls.filter:Controller on:filterChanged="filterChanged()" filter="{{ _filter }}"/>
-    {{ _filterString }}
+        <!-- WML -->
+        <Controls.filter:Controller on:filterChanged="filterChanged()" filter="{{ _filter }}"/>
+        {{ _filterString }}
 
-    // JavaScript
-    _filter: null,
-    _beforeMount: function() {
-        this._filter = {
-            city: 'Yaroslavl'
+        // JavaScript
+        _filter: null,
+        _beforeMount: function() {
+            this._filter = {
+                city: 'Yaroslavl'
+            }
+        },
+        filterChanged: function(e, filter) {
+            this._filter = filter; //самостоятельное обновление фильтра по причине отсутствия связи между опцией filter и состоянием
+            this._filterString = JSON.stringify(this._filter, null, 4);
         }
-    },
-    filterChanged: function(e, filter) {
-        this._filter = filter; //самостоятельное обновление фильтра по причине отсутствия связи между опцией filter и состоянием
-        this._filterString = JSON.stringify(this._filter, null, 4);
-    }
     
 - [selectedKeysChanged](https://wasaby.dev/docs/js/Controls/grid/View/events/selectedKeysChanged/?v=22.4100#method) (происходит при изменении набора выбранных элементов списка, интерфейс [IPromisedSelectable](https://wasaby.dev/docs/js/Controls/interface/IPromisedSelectable/?v=22.4100)), привязка обновлений при изменении selectedKeys:
     
-    <!-- WML -->
-    <Controls.operations:Controller on:selectedKeysChanged="onSelectedKeysChanged()" bind:selectedKeys="_selectedKeys" bind:excludedKeys="_excludedKeys">
-    <Controls.operations:Panel source="{{ _panelSource }} />
-    </Controls.operations:Controller>
+        <!-- WML -->
+        <Controls.operations:Controller on:selectedKeysChanged="onSelectedKeysChanged()" bind:selectedKeys="_selectedKeys" bind:excludedKeys="_excludedKeys">
+        <Controls.operations:Panel source="{{ _panelSource }} />
+        </Controls.operations:Controller>
                                        
-    // JavaScript
-    _beforeMount: function() {
-        this._selectedKeys = [];
-        this._excludedKeys = [];
-    },
-    onSelectedKeysChanged: function(e, selectedKeys, added, deleted) {
-        this._panelSource = this._getPanelSource(selectedKeys); //состояние не требует обновления вручную по причине привязки
-    }                                   
+        // JavaScript
+        _beforeMount: function() {
+            this._selectedKeys = [];
+            this._excludedKeys = [];
+        },
+        onSelectedKeysChanged: function(e, selectedKeys, added, deleted) {
+            this._panelSource = this._getPanelSource(selectedKeys); //состояние не требует обновления вручную по причине привязки
+        }                                   
     
 Список событий контрола "Таблица" в формате "Событие - Назначение - Интерфейс" доступен по [ссылке](https://wasaby.dev/docs/js/Controls/grid/View#event).
 
